@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cat:*)",
+      "Bash(bun run:*)",
+      "Bash(echo:*)",
+      "Bash(brew install:*)",
+      "Bash(brew tap:*)",
+      "Bash(bun install)",
+      "Bash(git checkout:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git pull:*)",
+      "WebSearch",
+      "WebFetch(domain:ghostty.org)",
+      "Bash(ghostty:*)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:github.com)",
+      "Bash(bun -e:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

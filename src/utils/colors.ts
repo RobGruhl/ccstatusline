@@ -382,19 +382,35 @@ export const POWERLINE_THEMES: Record<string, PowerlineTheme> = {
         }
     },
     'gruvbox': {
-        name: 'Gruvbox',
-        description: 'Retro groove color scheme',
+        name: 'Gruvbox Dark',
+        description: 'Retro groove dark color scheme (matches ghostty Gruvbox Dark)',
         1: {
             fg: ['brightWhite', 'black', 'black', 'brightWhite', 'black'],
             bg: ['bgRed', 'bgBrightYellow', 'bgBrightWhite', 'bgBlue', 'bgBrightGreen']
         },
         2: {
-            fg: ['ansi256:16', 'ansi256:235', 'ansi256:235', 'ansi256:16', 'ansi256:235'],
+            fg: ['ansi256:223', 'ansi256:235', 'ansi256:235', 'ansi256:223', 'ansi256:235'],
             bg: ['ansi256:167', 'ansi256:214', 'ansi256:246', 'ansi256:109', 'ansi256:142']
         },
         3: {
-            fg: ['hex:EBDBB2', 'hex:282828', 'hex:282828', 'hex:FDF6E3', 'hex:282828'],
+            fg: ['hex:EBDBB2', 'hex:282828', 'hex:282828', 'hex:EBDBB2', 'hex:282828'],
             bg: ['hex:CC241D', 'hex:FABD2F', 'hex:A89984', 'hex:458588', 'hex:98971A']
+        }
+    },
+    'gruvbox-light': {
+        name: 'Gruvbox Light',
+        description: 'Retro groove light color scheme (matches ghostty Gruvbox Light)',
+        1: {
+            fg: ['black', 'brightWhite', 'brightWhite', 'black', 'brightWhite'],
+            bg: ['bgRed', 'bgYellow', 'bgWhite', 'bgBlue', 'bgGreen']
+        },
+        2: {
+            fg: ['ansi256:235', 'ansi256:229', 'ansi256:229', 'ansi256:235', 'ansi256:229'],
+            bg: ['ansi256:167', 'ansi256:172', 'ansi256:243', 'ansi256:66', 'ansi256:106']
+        },
+        3: {
+            fg: ['hex:3C3836', 'hex:FBF1C7', 'hex:FBF1C7', 'hex:3C3836', 'hex:FBF1C7'],
+            bg: ['hex:CC241D', 'hex:D79921', 'hex:7C6F64', 'hex:458588', 'hex:98971A']
         }
     },
     'onedark': {

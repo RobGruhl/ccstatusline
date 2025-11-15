@@ -83,6 +83,50 @@ Custom widgets implementing the StatusItemWidget interface:
 - **Custom commands**: Execute shell commands and display output in status line
 - **Mergeable items**: Items can be merged together with or without padding
 
+## Ghostty Terminal Integration
+
+ccstatusline has special integration with [Ghostty terminal](https://ghostty.org/) for color alignment and automatic theme switching:
+
+### Gruvbox Theme Alignment
+
+The `gruvbox` and `gruvbox-light` powerline themes use **exact color values** from Ghostty's official Gruvbox Dark and Gruvbox Light themes:
+
+**Gruvbox Dark Colors** (from ghostty's iTerm2-Color-Schemes):
+- Background: `#282828`, Foreground: `#EBDBB2`
+- Palette: Red `#CC241D`, Green `#98971A`, Yellow `#D79921`, Blue `#458588`, Magenta `#B16286`, Cyan `#689D6A`
+- Bright colors: Yellow `#FABD2F`, Gray `#A89984`, etc.
+
+**Gruvbox Light Colors**:
+- Background: `#FBF1C7`, Foreground: `#3C3836`
+- Palette: Uses inverted Gruvbox colors optimized for light backgrounds
+
+### Automatic Light/Dark Mode Switching
+
+**Location**: `src/utils/appearance-detector.ts`
+
+When using `gruvbox` or `gruvbox-light` powerline themes, ccstatusline automatically detects macOS system appearance and switches themes:
+
+- **Dark Mode** → Uses `gruvbox` theme
+- **Light Mode** → Uses `gruvbox-light` theme
+
+This matches Ghostty's dual-theme behavior: `theme = dark:Gruvbox Dark,light:Gruvbox Light`
+
+**How it works**:
+1. Reads macOS appearance setting via `defaults read -g AppleInterfaceStyle`
+2. Resolves theme at render time (no config changes needed)
+3. Only applies to Gruvbox themes (other themes unchanged)
+4. Falls back to dark mode on non-macOS systems
+
+### Color Extraction Methodology
+
+Ghostty themes are sourced from the [mbadolato/iTerm2-Color-Schemes](https://github.com/mbadolato/iTerm2-Color-Schemes) repository, which provides standardized color definitions for 500+ terminal themes. ccstatusline's Gruvbox themes use these exact palette values to ensure pixel-perfect color matching with Ghostty.
+
+### Related Documentation
+
+For more about Ghostty configuration and terminal features, see the [ghostty-config repository](https://github.com/yourusername/ghostty-config) documentation, specifically:
+- `docs/config-reference.md` - Complete Ghostty configuration options
+- `docs/integration-ccstatusline.md` - Detailed integration guide
+
 ## Bun Usage Preferences
 
 Default to using Bun instead of Node.js:

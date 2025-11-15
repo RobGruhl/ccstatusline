@@ -11,6 +11,7 @@ import type {
 import { getColorLevelString } from '../types/ColorLevel';
 import type { Settings } from '../types/Settings';
 
+import { resolveThemeForAppearance } from './appearance-detector';
 import {
     applyColors,
     bgToFg,
@@ -55,10 +56,13 @@ function renderPowerlineStatusLine(
     const endCap = endCaps.length > 0 ? endCaps[capLineIndex % endCaps.length] : '';
 
     // Get theme colors if a theme is set and not 'custom'
-    const themeName = config.theme as string | undefined;
+    let themeName = config.theme as string | undefined;
     let themeColors: { fg: string[]; bg: string[] } | undefined;
 
     if (themeName && themeName !== 'custom') {
+        // Auto-resolve gruvbox theme based on macOS appearance
+        themeName = resolveThemeForAppearance(themeName);
+
         const theme = getPowerlineTheme(themeName);
         if (theme) {
             const colorLevel = getColorLevelString((settings.colorLevel as number) as (0 | 1 | 2 | 3));
