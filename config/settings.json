@@ -1,0 +1,59 @@
+{
+  "version": 3,
+  "lines": [
+    [
+      {
+        "id": "3cc6e8fd-5cd8-4f7a-9ea8-318434c9ba4b",
+        "type": "current-working-dir",
+        "metadata": {
+          "fishStyle": "true"
+        }
+      },
+      {
+        "id": "d4b59d44-817c-42af-98e8-5faf09dd6923",
+        "type": "git-branch",
+        "rawValue": false
+      },
+      {
+        "id": "c25955f0-b5d5-4188-8eab-5bf5c57cd986",
+        "type": "git-changes",
+        "rawValue": false
+      },
+      {
+        "id": "b233be58-e3a3-4065-b546-a8c6357103d2",
+        "type": "session-clock",
+        "rawValue": true
+      },
+      {
+        "id": "3421e464-5d8d-499d-a138-888d4ead33a7",
+        "type": "context-percentage",
+        "backgroundColor": "bgMagenta"
+      },
+      {
+        "id": "wall-clock-main",
+        "type": "wall-clock",
+        "rawValue": true
+      }
+    ],
+    []
+  ],
+  "flexMode": "full-minus-40",
+  "compactThreshold": 60,
+  "colorLevel": 3,
+  "defaultPadding": " ",
+  "inheritSeparatorColors": false,
+  "globalBold": false,
+  "powerline": {
+    "enabled": true,
+    "separators": [
+      ""
+    ],
+    "separatorInvertBackground": [
+      false
+    ],
+    "startCaps": [],
+    "endCaps": [],
+    "theme": "nord-aurora",
+    "autoAlign": true
+  }
+}

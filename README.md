@@ -167,6 +167,56 @@ The interactive configuration tool provides a terminal UI where you can:
 
 ---
 
+## 🔄 Setting Up on a New Machine
+
+Want to use the same configuration on multiple machines? This fork includes portable configuration files that make it easy to replicate your setup.
+
+### Quick Setup
+
+```bash
+# Clone your fork
+git clone https://github.com/RobGruhl/ccstatusline.git
+cd ccstatusline
+
+# Install dependencies
+bun install
+
+# Build the project
+bun run build
+
+# Copy configuration to the right location
+bash scripts/setup-config.sh
+```
+
+The setup script will:
+- Copy your ccstatusline settings to `~/.config/ccstatusline/settings.json`
+- Show you the Claude Code configuration snippet to add
+
+### What's Included
+
+Your fork contains:
+- **config/settings.json** - Your complete ccstatusline configuration
+- **config/claude-settings-snippet.json** - Claude Code integration snippet
+- **scripts/setup-config.sh** - Automated setup script
+
+For detailed instructions, see [config/README.md](config/README.md).
+
+### Keeping Configurations in Sync
+
+After customizing your setup:
+
+```bash
+# Copy your current settings back to the repo
+cp ~/.config/ccstatusline/settings.json config/settings.json
+
+# Commit and push
+git add config/settings.json
+git commit -m "Update configuration"
+git push
+```
+
+---
+
 ## 🪟 Windows Support
 
 ccstatusline works seamlessly on Windows with full feature compatibility across PowerShell (5.1+ and 7+), Command Prompt, and Windows Subsystem for Linux (WSL).
